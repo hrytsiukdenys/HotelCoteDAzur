@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Sign up - Cote d'Azur</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-line"> 
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Logo" class="logo-img" />
+        </a>
+      </div>
+
+      <div class="nav">
+        <a class="nav-item" href="index.html">Home</a>
+        <a class="nav-item" href="rooms_description.html">Rooms</a>
+        <a class="nav-item" href="restaurants_bars.html">Restaurants & bar</a>
+        <a class="nav-item" href="contact_information.html">Contacts</a>
+        <a class="nav-item" href="sing_up_form.html">Sign Up</a>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<form action="/your-registration-endpoint" method="post" class="form-container" novalidate onsubmit="return validateForm()">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="surname">Surname</label>
+  <input type="text" id="surname" name="surname" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="dob">Date of birth:</label>
+  <input type="date" id="dob" name="dob" required>
+
+  <div class="custom-radio-group">
+      <label>Sex:</label>
+
+    <label class="custom-radio" for="male">
+      <input type="radio" id="male" name="gender" value="male" required> Male
+    </label>
+
+    <label class="custom-radio" for="female">
+      <input type="radio" id="female" name="gender" value="female" required> Female
+    </label>
+
+    <label class="custom-radio" for="nonbinary">
+      <input type="radio" id="nonbinary" name="gender" value="nonbinary" required> Non-binary
+    </label>
+  </div>
+  
+  <div class="hdyf_hotel">
+    <label>How did you find out about our hotel?</label>
+    <select for="about_hotel" id="about_hotel">
+      <option value="" selected disabled hidden></option>
+      <option value="friends">From friends</option>
+      <option value="advertisement">From advertisement</option>
+      <option value="social">From social media</option>
+    </select>
+  </div>
+
+  <button type="submit">Sign Up</button>
+</form>
+
+</body>
+</html>

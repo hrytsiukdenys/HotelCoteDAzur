@@ -1,0 +1,540 @@
+/* global set */
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'ICTV', sans-serif; */
+    font-family: 'Brother 1816', sans-serif;
+    letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: 'Brother 1816';
+    src: local('Brother 1816 Medium'), local('Brother-1816-Medium'),
+        url('Brother1816-Medium.woff2') format('woff2'),
+        url('Brother1816-Medium.woff') format('woff'),
+        url('Brother1816-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ICTV';
+    src: local('ICTV Bold'), local('ICTV-Bold'),
+        url('ICTV-Bold.woff2') format('woff2'),
+        url('ICTV-Bold.woff') format('woff'),
+        url('ICTV-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Загальні стилі */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container {
+    margin: 0 0;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #08639f;
+}
+
+.header-line{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-item a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+    color: #0077b6;
+}
+
+.logo-holder {
+    float: left;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.logo-img {
+    width: 200px;
+    height: 100px;
+    margin-left: 40px;
+}
+
+
+/* COVER */
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cover {
+    background-image: url(/img/background2.png);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 20%;
+    position: relative;
+}
+
+/* .cover-dimmer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    text-align: center;
+    font-weight: 400;
+} */
+
+.cover-dimmer {
+    /* Додано фон для видимості */
+    padding: 40px;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+    /* Додано властивість position: relative; */
+    z-index: 2;
+    /* Збільшено значення z-index */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: -8px;
+    margin-bottom: .50rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
+.button-cover {
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #08639f;
+    color: white;
+    border: #000000;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+.button-cover:hover {
+    background-color: #72b1f8; /* Колір кнопки при наведенні */
+    color: #08639f; /* Колір тексту при наведенні */
+  }
+
+/* ADVANTAGES   */
+.advantages {
+    width: 80%;
+    margin: auto;
+    padding-top: 4rem;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #08639f;
+}
+
+.advantage {
+    float: left;
+    width: 27%;
+    margin: 1%;
+    padding: 2%;
+}
+
+.img-perevaga {
+    width: 100%;
+}
+
+h3 {
+    color: #0077b6;
+    margin-bottom: .8rem;
+}
+
+.adv-descr {
+    color: #08639f;
+    margin-top: .8rem;
+}
+
+.button-adv {
+    padding: .9rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: #08639f;
+    border: #000000;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: color 0.4s linear;   
+}
+
+.button-adv:hover {
+    background-color: #72b1f8; /* Колір кнопки при наведенні */
+    color: #08639f; /* Колір тексту при наведенні */
+  }
+
+/* BOOKING PANEL */
+.booking-panel {
+    /* background-color: #0077b6; */
+    background-image: url(/img/room3.jpg);
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    
+    height: 300px;
+    margin-top: 20px;
+       
+    text-align: center;
+    display: inline-block;
+}
+
+.bookpanel-dimmer {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+}
+
+/* .booking-panel::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} */
+
+.date-selection {
+    display: inline;
+    padding: 4%;
+    color: #fff;
+}
+
+label {
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.room-selection {
+    margin-bottom: 10px;
+    margin-top: 2rem;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: .9rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: #08639f;
+    border: #000000;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+#search-button:hover {
+    background-color: #72b1f8; /* Колір кнопки при наведенні */
+    color: #08639f; /* Колір тексту при наведенні */
+  }
+
+/* HOTEL DESCRIPTION */
+
+.hotel-description{
+    background-color: #08639f;
+    display: inline-block;
+    margin-top: 50px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border-radius: 25%; */
+}
+
+.description-panel{
+    display: flex;
+    background-color: #0077b6;
+    /* border-radius: 15px; */
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.description-item-right{
+    padding: 20px;
+    flex: 2;
+    color: #fff;
+    /* margin-right: 13rem; */
+}
+
+.description-item-left{
+    padding: 20px;
+    flex: 1;
+    /* margin-left: 4rem; */
+    text-align: center;
+}
+
+.image-description{
+    width: 340px;
+    height: 220px;
+}
+
+
+
+/* useful files */
+
+.useful-files {
+    margin-top: 4rem;
+    background-color: #08639f;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.files-item {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.useful-font{
+    font-weight: 700;
+}
+
+.files-item a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* OTHER COVER */
+.cover-rest::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cover-rest {
+    background-image: url(/img/restorant1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 20%;
+    position: relative;
+}
+
+.cover-rooms::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cover-rooms{
+    background-image: url(/img/room1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 20%;
+    position: relative;
+}
+
+.cover-recept::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cover-recept{
+    background-image: url(/img/poster.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 20%;
+    position: relative;
+}
+
+/* CONTACTS */
+
+.icon-contacts{
+   width: 30%;
+}
+
+.address-description{
+    background-color: #08639f;
+    display: inline-block;
+    padding-top: 3rem;
+    margin-top: 50px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}
+
+.address-panel{
+    text-align: center;
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+}
+
+.address-label{
+    text-align: center;
+}
+
+.address-map{
+    width: 80%;
+}
+
+h1{
+    color: #fff;
+}
+
+/* USER FORM */
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 370px; /* Додайте фіксовану ширину формі за потреби */
+    margin: 0 auto; /* Автоматичні відступи зліва та справа для центрування */
+    margin-top: 3rem;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #08639f;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+}
+
+.form-container button {
+    background-color: #0077b6;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form-container button:hover {
+    background-color: #72b1f8; /* Колір кнопки при наведенні */
+    color: #08639f; /* Колір тексту при наведенні */
+}
+
+.custom-radio-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+.custom-radio {
+    margin-right: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+/* .custom-radio input[type="radio"] {
+    margin-right: 5px;
+  } */
+
+.hdyf_hotel{
+    margin-top: 1rem;
+}
+
+

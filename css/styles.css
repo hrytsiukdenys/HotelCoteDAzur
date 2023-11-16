@@ -99,7 +99,7 @@ body {
 }
 
 .cover {
-    background-image: url(/img/background2.png);
+    background-image: url(images/background2.png);
     background-position: center;
     background-size: cover;
     color: #ffffff;
@@ -210,7 +210,7 @@ h3 {
 /* BOOKING PANEL */
 .booking-panel {
     /* background-color: #0077b6; */
-    background-image: url(/img/room3.jpg);
+    background-image: url(images/room3.jpg);
     background-position: bottom;
     background-size: cover;
     width: 100%;
@@ -384,7 +384,7 @@ select {
 }
 
 .cover-rest {
-    background-image: url(/img/restorant1.jpg);
+    background-image: url(images/restorant1.jpg);
     background-position: center;
     background-size: cover;
     color: #ffffff;
@@ -404,7 +404,7 @@ select {
 }
 
 .cover-rooms{
-    background-image: url(/img/room1.jpg);
+    background-image: url(images/room1.jpg);
     background-position: center;
     background-size: cover;
     color: #ffffff;
@@ -424,7 +424,7 @@ select {
 }
 
 .cover-recept{
-    background-image: url(/img/poster.jpg);
+    background-image: url(images/poster.jpg);
     background-position: center;
     background-size: cover;
     color: #ffffff;
